@@ -23,6 +23,14 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
       resolve: "gatsby-source-graphql",
       options: {
         // This type will contain remote schema Query type
